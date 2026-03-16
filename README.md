@@ -3,9 +3,9 @@
 GitHub training material for Basic level with automated deployment.
 
 ## Live Site
-**URL:** `[https://github.com/copilot-founder/git-training-basic-matrial/](https://github.com/copilot-founder/git-training-basic-matrial/)`
+**URL:** `[https://github.com/copilot-founder/git-training-basic-matrial/]`
 
-## 📋 Training Content
+## Training Content
 
 ### Event Invitation
 - Event invitation design image included
