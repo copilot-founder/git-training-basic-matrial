@@ -2,8 +2,8 @@
 
 GitHub training material for Basic level with automated deployment.
 
-## 🚀 Live Site
-**URL:** `https://yourusername.github.io/gitcap/git-training-basic-matrial/`
+## Live Site
+**URL:** `[https://github.com/copilot-founder/git-training-basic-matrial/](https://github.com/copilot-founder/git-training-basic-matrial/)`
 
 ## 📋 Training Content
 
@@ -40,10 +40,10 @@ This repository uses **GitHub Actions** for automatic deployment:
    - The workflow will automatically deploy on every push
 
 3. **Workflow Features:**
-   - ✅ Automatic deployment on push to main/master
-   - ✅ Proper permissions for Pages deployment
-   - ✅ Artifact upload and deployment
-   - ✅ No Jekyll processing (static HTML)
+   -  Automatic deployment on push to main/master
+   -  Proper permissions for Pages deployment
+   -  Artifact upload and deployment
+   -  No Jekyll processing (static HTML)
 
 ### Manual Deployment (if needed):
 - Go to **Actions** tab in your repository
