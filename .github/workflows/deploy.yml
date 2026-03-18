@@ -31,6 +31,11 @@ jobs:
         with:
           path: '.'
           
+      - name: Clear GitHub Pages Cache
+        run: |
+          echo "Deployment timestamp: $(date)" > deployment-info.txt
+          echo "Commit: ${{ github.sha }}" >> deployment-info.txt
+          
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
