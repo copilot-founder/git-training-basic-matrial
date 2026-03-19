@@ -98,11 +98,11 @@
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
-                <h1 class="text-2xl font-bold text-gray-800">
+                <h1 class="text-xl md:text-2xl font-bold text-gray-800">
                     <i class="fab fa-github text-gray-800 mr-2"></i>
                     GitHub Training
                 </h1>
-                <div class="flex space-x-4">
+                <div class="flex space-x-2 md:space-x-4 text-sm md:text-base">
                     <a href="#agenda" class="text-gray-600 hover:text-gray-800">Agenda</a>
                     <a href="#resources" class="text-gray-600 hover:text-gray-800">Resources</a>
                     <a href="#practice" class="text-gray-600 hover:text-gray-800">Practice</a>
@@ -111,12 +111,12 @@
         </div>
     </nav>
 
-    <header class="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-20">
+    <header class="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-12 md:py-20">
         <div class="container mx-auto px-4 text-center">
-            <i class="fab fa-github text-6xl mb-6"></i>
-            <h1 class="text-5xl font-bold mb-6">GitHub Training - Basic Material</h1>
-            <p class="text-xl mb-8">Learn GitHub fundamentals with hands-on exercises and practical examples</p>
-            <div class="flex justify-center space-x-4">
+            <i class="fab fa-github text-4xl md:text-6xl mb-4 md:mb-6"></i>
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 md:mb-6">GitHub Training - Basic Material</h1>
+            <p class="text-lg md:text-xl mb-6 md:mb-8">Learn GitHub fundamentals with hands-on exercises and practical examples</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
                 <a href="#practice" class="bg-green-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-green-700 transition">
                     <i class="fas fa-play mr-2"></i>Start Practice
                 </a>
@@ -151,8 +151,8 @@
             </h2>
             <div class="max-w-4xl mx-auto">
                 <div class="grid gap-6">
-                    <div class="bg-white p-6 rounded-xl shadow-lg flex items-center">
-                        <div class="bg-blue-100 text-blue-600 w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mr-6">
+                    <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg flex items-center">
+                        <div class="bg-blue-100 text-blue-600 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center text-lg md:text-xl font-bold mr-4 md:mr-6 shrink-0">
                             5m
                         </div>
                         <div>
@@ -161,8 +161,8 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white p-6 rounded-xl shadow-lg flex items-center">
-                        <div class="bg-green-100 text-green-600 w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mr-6">
+                    <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg flex items-center">
+                        <div class="bg-green-100 text-green-600 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center text-lg md:text-xl font-bold mr-4 md:mr-6 shrink-0">
                             10m
                         </div>
                         <div>
@@ -171,8 +171,8 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white p-6 rounded-xl shadow-lg flex items-center">
-                        <div class="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mr-6">
+                    <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg flex items-center">
+                        <div class="bg-purple-100 text-purple-600 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center text-lg md:text-xl font-bold mr-4 md:mr-6 shrink-0">
                             20m
                         </div>
                         <div>
@@ -181,8 +181,8 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white p-6 rounded-xl shadow-lg flex items-center">
-                        <div class="bg-yellow-100 text-yellow-600 w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mr-6">
+                    <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg flex items-center">
+                        <div class="bg-yellow-100 text-yellow-600 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center text-lg md:text-xl font-bold mr-4 md:mr-6 shrink-0">
                             5m
                         </div>
                         <div>
@@ -191,8 +191,8 @@
                         </div>
                     </div>
                     
-                    <div class="bg-white p-6 rounded-xl shadow-lg flex items-center">
-                        <div class="bg-red-100 text-red-600 w-16 h-16 rounded-full flex items-center justify-center text-xl font-bold mr-6">
+                    <div class="bg-white p-4 md:p-6 rounded-xl shadow-lg flex items-center">
+                        <div class="bg-red-100 text-red-600 w-12 h-12 md:w-16 md:h-16 rounded-full flex items-center justify-center text-lg md:text-xl font-bold mr-4 md:mr-6 shrink-0">
                             15m
                         </div>
                         <div>
@@ -286,30 +286,35 @@
     <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-4">
             <!-- FAQ Section -->
-            <section class="mb-12">
-                <h2 class="text-2xl font-bold text-center mb-8">
-                    <i class="fas fa-question-circle text-blue-400 mr-3"></i>
-                    Frequently Asked Questions
+            <section class="mb-8">
+                <h2 class="text-xl font-bold text-center mb-6">
+                    <i class="fas fa-question-circle text-blue-400 mr-2"></i>
+                    Quick Git FAQ
                 </h2>
-                <div class="max-w-4xl mx-auto space-y-6">
-                    <div class="bg-gray-700 p-6 rounded-xl">
-                        <h3 class="text-lg font-bold mb-3 text-white">What is Git commit? Is it like saving a file?</h3>
-                        <p class="text-gray-300 leading-relaxed">Yes! Git commit is like pressing Ctrl+S (save), but much more powerful. When you save a file with Ctrl+S, you overwrite the old version. Git commit creates a snapshot of your entire project that you can always go back to. Think of it as creating a restore point on your computer, but for your code.</p>
+                <div class="max-w-4xl mx-auto space-y-4">
+                    <div class="bg-gray-700 p-4 rounded-xl">
+                        <h3 class="text-md font-bold mb-2 text-white">What is Git commit?</h3>
+                        <p class="text-gray-300 text-sm">Like Ctrl+S but creates a snapshot you can return to anytime.</p>
                     </div>
                     
-                    <div class="bg-gray-700 p-6 rounded-xl">
-                        <h3 class="text-lg font-bold mb-3 text-white">What is a Git branch? Why do I need it?</h3>
-                        <p class="text-gray-300 leading-relaxed">A branch is like making a copy of your project to try new ideas without breaking the original. Imagine you're writing a document - you make a copy, experiment with changes, and if you like them, you merge them back. If not, you delete the copy. Branches let multiple people work on different features simultaneously.</p>
+                    <div class="bg-gray-700 p-4 rounded-xl">
+                        <h3 class="text-md font-bold mb-2 text-white">Basic Git commands?</h3>
+                        <p class="text-gray-300 text-sm"><code class="bg-gray-600 px-1 rounded">git add</code> = stage files | <code class="bg-gray-600 px-1 rounded">git commit</code> = save snapshot | <code class="bg-gray-600 px-1 rounded">git push</code> = upload to GitHub | <code class="bg-gray-600 px-1 rounded">git pull</code> = download updates</p>
                     </div>
                     
-                    <div class="bg-gray-700 p-6 rounded-xl">
-                        <h3 class="text-lg font-bold mb-3 text-white">What is a Pull Request? How is it different from pushing code?</h3>
-                        <p class="text-gray-300 leading-relaxed">A Pull Request is like asking "Can I merge my changes into the main project?" It's a polite way to propose changes. Think of it as showing your work to a teacher before submitting. Others can review, suggest improvements, and approve your changes before they become part of the main project.</p>
+                    <div class="bg-gray-700 p-4 rounded-xl">
+                        <h3 class="text-md font-bold mb-2 text-white">What is a branch?</h3>
+                        <p class="text-gray-300 text-sm">A copy of your project to experiment without breaking the original.</p>
                     </div>
                     
-                    <div class="bg-gray-700 p-6 rounded-xl">
-                        <h3 class="text-lg font-bold mb-3 text-white">Do I need to install anything to practice Git?</h3>
-                        <p class="text-gray-300 leading-relaxed">No installation needed! Use our interactive platform at <a href="https://copilot-founder.github.io/gitlearn/" class="text-blue-400 hover:underline">gitlearn</a> to practice Git commands in your browser. It's like a Git simulator where you can make mistakes safely and learn by doing.</p>
+                    <div class="bg-gray-700 p-4 rounded-xl">
+                        <h3 class="text-md font-bold mb-2 text-white">What is Pull Request?</h3>
+                        <p class="text-gray-300 text-sm">Asking "Can I merge my changes?" - like showing work before submitting.</p>
+                    </div>
+                    
+                    <div class="bg-gray-700 p-4 rounded-xl">
+                        <h3 class="text-md font-bold mb-2 text-white">Need to install Git?</h3>
+                        <p class="text-gray-300 text-sm">No! Practice at <a href="https://copilot-founder.github.io/gitlearn/" class="text-blue-400 hover:underline">gitlearn</a> - browser-based Git simulator.</p>
                     </div>
                 </div>
             </section>
@@ -320,7 +325,7 @@
                 <h3 class="text-2xl font-bold mb-4">GitHub Training - Basic Material</h3>
                 <p class="text-gray-400 mb-6">Thank you for reaching this repository. Feel free to fork and contribute!</p>
                 <p class="text-xl font-semibold mb-4">H a p p y &nbsp;&nbsp;&nbsp; L e a r n i n g</p>
-                <div class="flex justify-center space-x-6">
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
                     <a href="https://github.com/mohitmehral/gitcap" class="text-gray-400 hover:text-white">
                         <i class="fab fa-github mr-1"></i>Repository
                     </a>
