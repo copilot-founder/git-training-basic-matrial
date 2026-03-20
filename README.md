@@ -1,18 +1,13 @@
-# GitHub Training - Basic Material
-
-GitHub training material for Basic level with automated deployment.
-
-## Live Site
+<img width="428" height="210" alt="image" src="https://github.com/user-attachments/assets/85851339-ba85-40fb-aecd-ea06d7f10548" />
 
 **Live site:** https://copilot-founder.github.io/git-training/
 
-**Repo URL:** `[https://github.com/copilot-founder/git-training/]`
+**Clone Repo url:** https://github.com/copilot-founder/git-training/
 
-## Training Content
+## Git Training Content
 
 ### Event Invitation
 - Event invitation design image included
-- Professional training announcement
 
 ### Interactive Practice
 - **No Git CLI installation required!**
