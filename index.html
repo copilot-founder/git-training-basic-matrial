@@ -65,26 +65,42 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Do I need to install Git CLI for this GitHub training?",
+          "name": "How does branching work in Git?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No! This GitHub training uses an interactive web-based platform at copilot-founder.github.io/gitlearn/ that requires no installation. You can practice Git commands, branching, merging, and pull requests directly in your browser."
+            "text": "A branch is your own parallel universe of code. You branch off main, experiment freely, and merge back when ready using git branch, git checkout, and git merge commands."
           }
         },
         {
           "@type": "Question",
-          "name": "How long is the GitHub training session?",
+          "name": "What is the difference between SVN and Git?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The complete GitHub training session is 55 minutes, structured as: 5 minutes welcome, 10 minutes GitHub basics and branching, 20 minutes hands-on exercises, 5 minutes cheat sheet review, and 15 minutes Q&A."
+            "text": "SVN is centralized — one server, must be online to commit. Git is distributed — every developer has a full copy of the repo and can work offline. Git branching is instant while SVN branching is heavy."
           }
         },
         {
           "@type": "Question",
-          "name": "What topics are covered in the GitHub basic training?",
+          "name": "What is a Git commit?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "The training covers GitHub fundamentals including repository basics, branching strategies, merging workflows, pull request creation and review, collaboration best practices, and hands-on exercises with real GitHub workflows."
+            "text": "A commit is like a save point in a video game. You stage files with git add, then save a snapshot with git commit. You can always return to any commit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a Pull Request?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A Pull Request is how you ask your team to review your code before merging it into the main branch. Push your branch, open a PR on GitHub, get reviews, and merge when approved."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to install Git for this training?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No installation needed. Practice everything in your browser at copilot-founder.github.io/gitlearn/ — a browser-based Git simulator with zero setup."
           }
         }
       ]
@@ -106,6 +122,7 @@
                     <a href="#agenda" class="text-gray-600 hover:text-gray-800">Agenda</a>
                     <a href="#resources" class="text-gray-600 hover:text-gray-800">Resources</a>
                     <a href="#practice" class="text-gray-600 hover:text-gray-800">Practice</a>
+                    <a href="#faq" class="text-gray-600 hover:text-gray-800">FAQ</a>
                 </div>
             </div>
         </div>
@@ -126,6 +143,21 @@
             </div>
         </div>
     </header>
+
+    <section class="py-12 bg-gradient-to-b from-gray-900 to-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-2">
+                    <i class="fas fa-film text-yellow-400 mr-2"></i>
+                    See Git in Action
+                </h2>
+                <p class="text-gray-400 mb-6">Watch how Git workflows come together — branching, committing, merging & more</p>
+                <div class="rounded-xl overflow-hidden shadow-2xl border-2 border-gray-700 inline-block">
+                    <img src="./git-training-presentation-gif.gif" alt="Git Training Presentation Animation - See Git workflows in action" class="max-w-full h-auto" style="max-height: 520px;">
+                </div>
+            </div>
+        </div>
+    </section>
 
     <section class="py-16">
         <div class="container mx-auto px-4">
@@ -286,36 +318,217 @@
     <footer class="bg-gray-800 text-white py-12">
         <div class="container mx-auto px-4">
             <!-- FAQ Section -->
-            <section class="mb-8">
-                <h2 class="text-xl font-bold text-center mb-6">
+            <section id="faq" class="mb-8">
+                <h2 class="text-2xl font-bold text-center mb-8">
                     <i class="fas fa-question-circle text-blue-400 mr-2"></i>
-                    Quick Git FAQ
+                    FAQ
                 </h2>
-                <div class="max-w-4xl mx-auto space-y-4">
-                    <div class="bg-gray-700 p-4 rounded-xl">
-                        <h3 class="text-md font-bold mb-2 text-white">What is Git commit?</h3>
-                        <p class="text-gray-300 text-sm">Like Ctrl+S but creates a snapshot you can return to anytime.</p>
+                <div class="max-w-5xl mx-auto space-y-3" id="faq-container">
+
+                    <!-- FAQ 1: Branching Diagram -->
+                    <div class="faq-item bg-gray-700 rounded-xl overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-4 text-left hover:bg-gray-600 transition">
+                            <span class="font-bold text-white"><i class="fas fa-code-branch text-green-400 mr-2"></i>How does branching work in Git?</span>
+                            <i class="fas fa-chevron-down text-gray-400 faq-icon transition-transform"></i>
+                        </button>
+                        <div class="faq-body hidden px-4 pb-5">
+                            <p class="text-gray-300 text-sm mb-4">A branch = your own parallel universe of code. You branch off, experiment, and merge back when ready.</p>
+                            <!-- Visual Branch Diagram -->
+                            <div class="bg-gray-900 rounded-lg p-4 font-mono text-xs md:text-sm overflow-x-auto">
+<pre class="text-gray-200 leading-relaxed">
+main        ●───●───●───────────────●  (stable)
+                 \                 /
+feature          ●───●───●───●──●   (your work)
+                 ↑               ↑
+            git branch      git merge
+           feature          feature → main
+</pre>
+                            </div>
+                            <div class="mt-3 grid grid-cols-1 md:grid-cols-3 gap-2 text-xs">
+                                <div class="bg-gray-800 p-2 rounded text-center">
+                                    <code class="text-green-400">git branch feature</code>
+                                    <p class="text-gray-400 mt-1">Create branch</p>
+                                </div>
+                                <div class="bg-gray-800 p-2 rounded text-center">
+                                    <code class="text-yellow-400">git checkout feature</code>
+                                    <p class="text-gray-400 mt-1">Switch to it</p>
+                                </div>
+                                <div class="bg-gray-800 p-2 rounded text-center">
+                                    <code class="text-blue-400">git merge feature</code>
+                                    <p class="text-gray-400 mt-1">Merge back to main</p>
+                                </div>
+                            </div>
+
+                            <!-- Real-world Scenarios -->
+                            <div class="mt-5">
+                                <h4 class="text-white font-bold text-sm mb-3"><i class="fas fa-lightbulb text-yellow-400 mr-1"></i> Real-world scenarios — why branching saves your life</h4>
+                                <div class="space-y-3">
+                                    <div class="bg-gray-800 rounded-lg p-3 border-l-4 border-green-500">
+                                        <p class="text-green-400 font-bold text-xs mb-1">🚀 Scenario 1 — New feature without breaking production</p>
+                                        <p class="text-gray-300 text-xs">Your app is live. Boss says "add dark mode". You create <code class="bg-gray-700 px-1 rounded">git branch dark-mode</code>, build it safely. Meanwhile, <code class="text-white">main</code> stays untouched — users never see half-done work.</p>
+                                    </div>
+                                    <div class="bg-gray-800 rounded-lg p-3 border-l-4 border-red-500">
+                                        <p class="text-red-400 font-bold text-xs mb-1">🔥 Scenario 2 — Emergency hotfix while feature is in progress</p>
+                                        <p class="text-gray-300 text-xs">You're halfway through building a payment page on <code class="bg-gray-700 px-1 rounded">feature/payments</code>. Suddenly — critical bug in production! You switch to <code class="bg-gray-700 px-1 rounded">git checkout main</code>, create <code class="bg-gray-700 px-1 rounded">hotfix/login-crash</code>, fix it, merge, deploy. Then go right back to your payments branch. No code mixed up.</p>
+                                    </div>
+                                    <div class="bg-gray-800 rounded-lg p-3 border-l-4 border-blue-500">
+                                        <p class="text-blue-400 font-bold text-xs mb-1">👥 Scenario 3 — Two devs, same project, zero conflicts</p>
+                                        <p class="text-gray-300 text-xs">Dev A works on <code class="bg-gray-700 px-1 rounded">feature/navbar</code>, Dev B works on <code class="bg-gray-700 px-1 rounded">feature/footer</code>. Both branch from <code class="text-white">main</code>. They never step on each other's code. When done, both merge back — clean and independent.</p>
+                                    </div>
+                                    <div class="bg-gray-800 rounded-lg p-3 border-l-4 border-yellow-500">
+                                        <p class="text-yellow-400 font-bold text-xs mb-1">🧪 Scenario 4 — "Let me try something crazy"</p>
+                                        <p class="text-gray-300 text-xs">Want to rewrite the entire auth system? Create <code class="bg-gray-700 px-1 rounded">experiment/new-auth</code>. If it works — merge it. If it's a disaster — just delete the branch. Main is still perfect. Zero risk.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="bg-gray-700 p-4 rounded-xl">
-                        <h3 class="text-md font-bold mb-2 text-white">Basic Git commands?</h3>
-                        <p class="text-gray-300 text-sm"><code class="bg-gray-600 px-1 rounded">git add</code> = stage files | <code class="bg-gray-600 px-1 rounded">git commit</code> = save snapshot | <code class="bg-gray-600 px-1 rounded">git push</code> = upload to GitHub | <code class="bg-gray-600 px-1 rounded">git pull</code> = download updates</p>
+
+                    <!-- FAQ 2: SVN vs Git -->
+                    <div class="faq-item bg-gray-700 rounded-xl overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-4 text-left hover:bg-gray-600 transition">
+                            <span class="font-bold text-white"><i class="fas fa-exchange-alt text-orange-400 mr-2"></i>SVN vs Git — What's the difference?</span>
+                            <i class="fas fa-chevron-down text-gray-400 faq-icon transition-transform"></i>
+                        </button>
+                        <div class="faq-body hidden px-4 pb-5">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <div class="bg-gray-900 rounded-lg p-4">
+                                    <h4 class="text-red-400 font-bold text-sm mb-2"><i class="fas fa-server mr-1"></i>SVN (Centralized)</h4>
+<pre class="text-gray-300 text-xs leading-relaxed">
+   ┌──────────┐
+   │  SERVER  │  ← single source
+   └────┬─────┘
+   ┌────┴─────┐
+   │ checkout  │
+   ▼          ▼
+  👤 Dev A   👤 Dev B
+  (must be online to commit)
+</pre>
+                                </div>
+                                <div class="bg-gray-900 rounded-lg p-4">
+                                    <h4 class="text-green-400 font-bold text-sm mb-2"><i class="fab fa-git-alt mr-1"></i>Git (Distributed)</h4>
+<pre class="text-gray-300 text-xs leading-relaxed">
+  👤 Dev A        👤 Dev B
+  ┌──────┐       ┌──────┐
+  │ FULL │       │ FULL │
+  │ REPO │◄────►│ REPO │
+  └──┬───┘       └──┬───┘
+     └──────┬───────┘
+       ┌────┴─────┐
+       │  REMOTE  │  (GitHub)
+       └──────────┘
+</pre>
+                                </div>
+                            </div>
+                            <!-- Command Comparison Table -->
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-xs md:text-sm">
+                                    <thead>
+                                        <tr class="border-b border-gray-600">
+                                            <th class="text-left p-2 text-gray-400">Action</th>
+                                            <th class="text-left p-2 text-red-400">SVN</th>
+                                            <th class="text-left p-2 text-green-400">Git</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-gray-300">
+                                        <tr class="border-b border-gray-700"><td class="p-2">Get repo</td><td class="p-2"><code>svn checkout</code></td><td class="p-2"><code>git clone</code></td></tr>
+                                        <tr class="border-b border-gray-700"><td class="p-2">Save changes</td><td class="p-2"><code>svn commit</code> → server</td><td class="p-2"><code>git commit</code> → local</td></tr>
+                                        <tr class="border-b border-gray-700"><td class="p-2">Upload</td><td class="p-2"><em>same as commit</em></td><td class="p-2"><code>git push</code></td></tr>
+                                        <tr class="border-b border-gray-700"><td class="p-2">Download</td><td class="p-2"><code>svn update</code></td><td class="p-2"><code>git pull</code></td></tr>
+                                        <tr class="border-b border-gray-700"><td class="p-2">Branch</td><td class="p-2"><code>svn copy</code> (heavy)</td><td class="p-2"><code>git branch</code> (instant)</td></tr>
+                                        <tr><td class="p-2">Offline work?</td><td class="p-2">❌ No</td><td class="p-2">✅ Yes</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="bg-gray-700 p-4 rounded-xl">
-                        <h3 class="text-md font-bold mb-2 text-white">What is a branch?</h3>
-                        <p class="text-gray-300 text-sm">A copy of your project to experiment without breaking the original.</p>
+
+                    <!-- FAQ 3: Commit -->
+                    <div class="faq-item bg-gray-700 rounded-xl overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-4 text-left hover:bg-gray-600 transition">
+                            <span class="font-bold text-white"><i class="fas fa-save text-blue-400 mr-2"></i>What is a commit?</span>
+                            <i class="fas fa-chevron-down text-gray-400 faq-icon transition-transform"></i>
+                        </button>
+                        <div class="faq-body hidden px-4 pb-5">
+                            <p class="text-gray-300 text-sm mb-3">Think of it as a <strong class="text-white">save point in a video game</strong> — you can always go back to it.</p>
+                            <div class="bg-gray-900 rounded-lg p-4 font-mono text-xs md:text-sm">
+<pre class="text-gray-200 leading-relaxed">
+  Working Dir    Staging Area     Repository
+  ┌────────┐     ┌────────┐      ┌────────┐
+  │ edit   │────►│ staged │─────►│ saved! │
+  │ files  │     │ files  │      │ forever│
+  └────────┘     └────────┘      └────────┘
+    <span class="text-yellow-400">git add .</span>      <span class="text-green-400">git commit -m "msg"</span>
+</pre>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="bg-gray-700 p-4 rounded-xl">
-                        <h3 class="text-md font-bold mb-2 text-white">What is Pull Request?</h3>
-                        <p class="text-gray-300 text-sm">Asking "Can I merge my changes?" - like showing work before submitting.</p>
+
+                    <!-- FAQ 4: Pull Request -->
+                    <div class="faq-item bg-gray-700 rounded-xl overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-4 text-left hover:bg-gray-600 transition">
+                            <span class="font-bold text-white"><i class="fas fa-code-pull-request text-purple-400 mr-2"></i>What is a Pull Request?</span>
+                            <i class="fas fa-chevron-down text-gray-400 faq-icon transition-transform"></i>
+                        </button>
+                        <div class="faq-body hidden px-4 pb-5">
+                            <p class="text-gray-300 text-sm mb-3">It's like raising your hand and saying <strong class="text-white">"Hey team, I'm done — please review before I merge."</strong></p>
+                            <div class="bg-gray-900 rounded-lg p-4 font-mono text-xs md:text-sm">
+<pre class="text-gray-200 leading-relaxed">
+  You (feature branch)
+    │
+    ├── code, code, code...
+    ├── <span class="text-yellow-400">git push origin feature</span>
+    │
+    ▼
+  <span class="text-blue-400">Open Pull Request on GitHub</span>
+    │
+    ├── 👀 Team reviews your code
+    ├── 💬 Comments & suggestions
+    ├── ✅ Approved!
+    │
+    ▼
+  <span class="text-green-400">Merge → main branch updated</span>
+</pre>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <div class="bg-gray-700 p-4 rounded-xl">
-                        <h3 class="text-md font-bold mb-2 text-white">Need to install Git?</h3>
-                        <p class="text-gray-300 text-sm">No! Practice at <a href="https://copilot-founder.github.io/gitlearn/" class="text-blue-400 hover:underline">gitlearn</a> - browser-based Git simulator.</p>
+
+                    <!-- FAQ 5: Daily Workflow -->
+                    <div class="faq-item bg-gray-700 rounded-xl overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-4 text-left hover:bg-gray-600 transition">
+                            <span class="font-bold text-white"><i class="fas fa-sync-alt text-cyan-400 mr-2"></i>What does a daily Git workflow look like?</span>
+                            <i class="fas fa-chevron-down text-gray-400 faq-icon transition-transform"></i>
+                        </button>
+                        <div class="faq-body hidden px-4 pb-5">
+                            <div class="bg-gray-900 rounded-lg p-4 font-mono text-xs md:text-sm">
+<pre class="text-gray-200 leading-relaxed">
+  ☀️ Morning
+  <span class="text-yellow-400">git pull origin main</span>          ← get latest changes
+  <span class="text-yellow-400">git checkout -b my-task</span>       ← create your branch
+
+  💻 During the day
+  <span class="text-green-400">git add .</span>                      ← stage your work
+  <span class="text-green-400">git commit -m "built feature"</span> ← save locally
+
+  🌙 End of day
+  <span class="text-blue-400">git push origin my-task</span>       ← push to GitHub
+  <span class="text-blue-400">Open a Pull Request</span>           ← request review
+</pre>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- FAQ 6: Install -->
+                    <div class="faq-item bg-gray-700 rounded-xl overflow-hidden">
+                        <button onclick="toggleFaq(this)" class="w-full flex items-center justify-between p-4 text-left hover:bg-gray-600 transition">
+                            <span class="font-bold text-white"><i class="fas fa-laptop text-yellow-400 mr-2"></i>Do I need to install anything?</span>
+                            <i class="fas fa-chevron-down text-gray-400 faq-icon transition-transform"></i>
+                        </button>
+                        <div class="faq-body hidden px-4 pb-5">
+                            <p class="text-gray-300 text-sm">Nope! Practice everything in your browser → <a href="https://copilot-founder.github.io/gitlearn/" class="text-blue-400 hover:underline font-bold">gitlearn</a>. Zero setup, just open and start.</p>
+                        </div>
+                    </div>
+
                 </div>
             </section>
             
@@ -340,16 +553,23 @@
         </div>
     </footer>
 
+    <style>
+        .faq-icon.open { transform: rotate(180deg); }
+    </style>
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
             });
         });
+
+        function toggleFaq(btn) {
+            const body = btn.nextElementSibling;
+            const icon = btn.querySelector('.faq-icon');
+            body.classList.toggle('hidden');
+            icon.classList.toggle('open');
+        }
     </script>
 </body>
 </html>
